@@ -1,0 +1,14 @@
+{
+  "name": "tweeter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rhass99/next-react-tweeter.git",
+  "author": "rhass99 <rhass99@gmail.com>",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
