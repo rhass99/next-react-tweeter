@@ -6,7 +6,10 @@
   "author": "rhass99 <rhass99@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next -- -p 8080"
+    "dev": "next -- -p 8080",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "next": "^8.1.0",
