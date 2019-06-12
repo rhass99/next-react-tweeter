@@ -1,5 +1,5 @@
 import { Sticky, Segment, Header, Image} from 'semantic-ui-react';
-import Errors from './Errors';
+import Errors from './errors';
 import { HeaderButton } from '../styledComponents/components'
 
 
