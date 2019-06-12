@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Tweetlist from '../tweets/Tweetlist';
-import CreateTweet from '../tweets/CreateTweet';
+import Tweetlist from '../tweets/tweetlist';
+import CreateTweet from '../tweets/createTweet';
 import Footer from '../common/footer';
 
 const listDBTweets = () => (prevState, currentProps) => {

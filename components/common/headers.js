@@ -1,6 +1,6 @@
 import { Sticky, Segment, Header, Image} from 'semantic-ui-react';
 import Errors from './Errors';
-import { HeaderButton } from '../styledComponents/Components'
+import { HeaderButton } from '../styledComponents/components'
 
 
 const PageHeaders = (props) => {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button ,Form, Segment, Header, TextArea } from 'semantic-ui-react';
-import { TweetButton, CreateTweetSegment } from '../styledComponents/Components';
+import { TweetButton, CreateTweetSegment } from '../styledComponents/components';
 
 const handleUpdateTweetValue = () => (prevState, currentProps) => {
   return { ...prevState, newTweetValue: currentProps.newTweetValue}
