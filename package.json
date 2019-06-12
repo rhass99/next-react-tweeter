@@ -5,10 +5,14 @@
   "repository": "git@github.com:rhass99/next-react-tweeter.git",
   "author": "rhass99 <rhass99@gmail.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "next -- -p 8080"
+  },
   "dependencies": {
     "next": "^8.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "semantic-ui-react": "^0.87.1",
+    "styled-components": "^4.3.1"
   }
 }
