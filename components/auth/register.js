@@ -1,5 +1,4 @@
 import React from 'react';
-const react = require('react')
 import {
   Button,
   Form,

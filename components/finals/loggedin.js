@@ -6,6 +6,9 @@ import Footer from '../common/footer';
 const listDBTweets = () => (prevState, currentProps) => {
   return { ...prevState, tweets: currentProps.tweets}
 }
+const newTeweetChange = () => (prevState, currentProps) => {
+  return { ...prevState, newTweet: currentProps.newTweet}
+}
 
 const myTweets = [
   {
@@ -29,40 +32,53 @@ class Loggedin extends Component {
   state = {
     tweets: [],
     creating: true,
-    newTweetValue: '122'
+    newTweet: ''
   }
 
-  handleAddTweet = (e) => {
+  handleNewTweetChange = (e) => {
+    const handleState = newTeweetChange()
+    this.setState(handleState(this.state, { newTweet: e.target.value }))
+    console.log(this.state)
+  }
+
+  handleAddTweet = () => {
+    console.log(this.state.newTweet)
     const handleState = listDBTweets()
-    console.log(this.state.tweets)
     let newList = [{
       avatarURL: "",
-      text: e.target.value,
-      timeLapsed: 4,
+      text: this.state.newTweet,
+      timeLapsed: '10 days',
       userHandle: "@blend",
       username: "Blend",
     }].concat(this.state.tweets)
     this.setState(handleState(this.state, {tweets: newList}))
+    return newList
   }
 
-  handleListofTweets(newTweets) {
+  handleListofTweets = (newTweets) => {
     const handleState = listDBTweets()
     this.setState(handleState(this.state, {tweets: newTweets}))
   }
-  
 
   componentDidMount(){
     this.handleListofTweets(myTweets)
+  }
+
+  componentShallUpdate() {
+    this.addNewTweet()
   }
 
 
   render() {
     return (
       <div>
-          <Tweetlist 
+          <Tweetlist
+            addTweet={this.handleAddTweet}
+            handleNewTweetChange={this.handleNewTweetChange}
+            newTweet={this.state.newTweet}
             tweetList={this.state.tweets} 
             creating={this.state.creating}>
-            <CreateTweet addTweet={this.handleAddTweet} />
+            <CreateTweet />
           </Tweetlist>
           <Footer />
       </div>

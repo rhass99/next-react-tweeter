@@ -11,9 +11,10 @@
   "scripts": {
     "dev": "next -- -p 8080",
     "build": "next build",
-    "start": "NODE_ENV=production node ./server/server.js -p $PORT"
+    "start": "NODE_ENV=dev node ./server.js -p $PORT"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

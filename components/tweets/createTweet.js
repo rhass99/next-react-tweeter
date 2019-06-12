@@ -8,17 +8,13 @@ const handleUpdateTweetValue = () => (prevState, currentProps) => {
 
 class CreateTweet extends Component {
 
-  state = {
-    newTweetValue: ''
-  }
-
   handleNewTweetValue = (event) => {
     const updateState = handleUpdateTweetValue()
     this.setState(updateState(this.state, {newTweetValue: event.target.value}))
   }
 
   render() {
-    const { addTweet } = this.props
+    const { newTweet, addTweet, handleNewTweetChange } = this.props
     return (
       <Segment.Group>
         <CreateTweetSegment>
@@ -35,12 +31,11 @@ class CreateTweet extends Component {
               <TextArea
               type='text'
               focus='true' placeholder='Tweet - it'
-              value={this.state.newTweetValue}
-              onChange={this.handleNewTweetValue}
+              value={newTweet}
+              onChange={handleNewTweetChange}
               />
             </Form.Field>
             <TweetButton
-              value={this.state.newTweetValue}
               onClick={addTweet}
               floated='left'>
               Tweet
@@ -50,7 +45,7 @@ class CreateTweet extends Component {
                 textAlign="right"
                 floated="right"
                 >
-                5
+                {newTweet.length}
             </Header>
           </Form>
         </CreateTweetSegment>
