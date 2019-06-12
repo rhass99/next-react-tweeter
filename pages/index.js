@@ -22,7 +22,7 @@ const Meta = () => {
 class Index extends Component {
   
   state = {
-    loggedin: false
+    loggedin: true
   }
 
   render() {

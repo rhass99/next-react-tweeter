@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import { Button ,Form, Segment, Header, TextArea } from 'semantic-ui-react';
+import { TweetButton, CreateTweetSegment } from '../styledComponents/Components';
 
 const CreateTweet = (props) => {
   return (
     <Segment.Group>
-      <Segment>
+      <CreateTweetSegment>
         <Header 
         as='h2' 
         textAlign="left"
         >
         Compose Tweet
         </Header>
-      </Segment>
-      <Segment clearing={true}>
+      </CreateTweetSegment>
+      <CreateTweetSegment clearing={true}>
         <Form>
           <Form.Field>
             <TextArea focus={true} placeholder='Tweet - it' />
           </Form.Field>
-          <Button type='submit' floated='left'>
+          <TweetButton type='submit' floated='left'>
             Tweet
-          </Button>
+          </TweetButton>
           <Header 
               as='h5' 
               textAlign="right"
@@ -28,7 +29,7 @@ const CreateTweet = (props) => {
               5
           </Header>
         </Form>
-      </Segment>
+      </CreateTweetSegment>
   </Segment.Group>
   )
 }

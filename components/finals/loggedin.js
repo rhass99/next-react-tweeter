@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Tweetlist from '../tweets/tweetlist';
-import CreateTweet from '../tweets/createTweet';
+import Tweetlist from '../tweets/Tweetlist';
+import CreateTweet from '../tweets/CreateTweet';
 import Footer from '../common/footer';
 
 
@@ -23,7 +23,7 @@ class Loggedin extends Component {
       timeLapsed: 4,
      }
     ],
-     creating: false,
+     creating: true,
   }
 
 
@@ -34,7 +34,7 @@ class Loggedin extends Component {
           <Tweetlist 
             tweetList={this.state.tweets} 
             creating={this.state.creating}>
-            <CreateTweet/>
+            <CreateTweet />
           </Tweetlist>
           <Footer />
       </div>

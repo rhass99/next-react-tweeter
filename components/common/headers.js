@@ -1,11 +1,14 @@
-import { Button, Segment, Header, Image} from 'semantic-ui-react';
-import Errors from './errors'
+import { Sticky, Segment, Header, Image} from 'semantic-ui-react';
+import Errors from './Errors';
+import { HeaderButton } from '../styledComponents/Components'
+
 
 const PageHeaders = (props) => {
   const { loggedin, errors } = props
   return (
     <div>
-      <Segment style={{backgroundColor: '#016936'}} clearing={true}>
+      <Sticky>
+      <Segment style={{backgroundColor: '#49C39E'}} clearing={true}>
         <Header as='h1' floated='left'>
         <Image 
           src={`/static/img/bird.png`}
@@ -15,9 +18,10 @@ const PageHeaders = (props) => {
           rounded
         ></Image> Tweeter
         </Header>
-        {(loggedin ? <Button floated='right'>Compose</Button> : <Button floated='right'>Login/Register</Button>)}
+        {(loggedin ? <HeaderButton floated='right'>Compose</HeaderButton> : <HeaderButton floated='right'>Login/Register</HeaderButton>)}
       </Segment>
     <Errors errors={errors}/>
+    </Sticky>
     </div>
   )
 }
