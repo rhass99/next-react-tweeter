@@ -20,7 +20,7 @@ const Tweet = (props) => {
               {tweet.userHandle}
               </Header>
           </Segment>
-        <Segment style={{height: '6rem', verticalAlign:'middle'}}>
+        <Segment style={{minHeight: '5rem', verticalAlign:'middle'}}>
             {tweet.text}
         </Segment>
         <Segment.Group horizontal>
@@ -53,7 +53,7 @@ class Tweetlist extends Component {
         </Grid.Row>
 
       {
-        tweetList.map((x, i) => <Tweet key={i} tweet={x}/>)
+         tweetList.length > 0 ? tweetList.map((x, i) => <Tweet key={i} tweet={x}/>) : <div></div>
       }
 
       </Grid>
