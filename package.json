@@ -5,6 +5,9 @@
   "repository": "git@github.com:rhass99/next-react-tweeter.git",
   "author": "rhass99 <rhass99@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "10.16.0"
+  },
   "scripts": {
     "dev": "next -- -p 8080",
     "build": "next build",
